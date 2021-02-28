@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --color-greyBg: #f9f9f9;
+  --color-grey: #e5e5e5;
+  --color-greyLight: #e5e5e5a8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+i {
+  font-style: normal;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-content: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+.searchBar i {
+  padding: 0 7.5px;
+}
+.searchBar .logo {
+  display: flex;
+  align-items: center;
+}
+.searchBar .logo img {
+  width: 100px;
+  margin-left: 15px;
+}
+.searchBar .search form {
+  border: 1px solid #ddd;
+  height: 35px;
+}
+.searchBar .search input,
+.searchBar .search button {
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+  width: 5%;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 6px;
+  padding-top: 8px;
+}
+.searchBar .search input {
+  width: 500px;
+}
+
+.icons .author {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.icons .author img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.mainBody {
+  height: calc(100vh - 70px);
+  display: flex;
+  overflow: hidden;
+}
+
+.videos {
+  background: var(--color-greyBg);
+  height: 100%;
+  width: 100%;
+  padding: 15px 25px;
+  overflow-y: scroll;
+  /* Create four equal columns that sits next to each other */
+}
+.videos .videosGrid {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.videos .videosGrid .video {
+  width: calc(25% - 10px);
+  margin-bottom: 40px;
+}
+.videos .videosGrid .video .thumbnail {
+  width: 100%;
+  height: 170px;
+}
+.videos .videosGrid .video .thumbnail img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.videos .videosGrid .video .details {
+  padding-top: 10px;
+}
+.videos .videosGrid .video .details .text h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+.videos .videosGrid .video .details .text a {
+  color: inherit;
+  text-decoration: none;
+}
+.videos .videosGrid .video .details .text a,
+.videos .videosGrid .video .details .text span {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.videos .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 100px;
+}
+.videos .column {
+  flex: 50%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=output1.css.map */
