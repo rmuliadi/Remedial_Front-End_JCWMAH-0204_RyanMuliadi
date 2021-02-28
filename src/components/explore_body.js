@@ -29,6 +29,7 @@ class explore_body extends Component {
       return (
         <div className="details">
           <div className="text">
+            <br />
             <h3>{item.title}</h3>
             <a href="#">{item.channel_name}</a>
             <span>{item.views}</span>
@@ -43,12 +44,12 @@ class explore_body extends Component {
         <div className="mainBody">
           <div className="videos">
             <div className="row">
-              <div className="column">
+              <div className="column1">
                 <div className="videosGrid">
                   <div className="video">{videos1}</div>
                 </div>
               </div>
-              <div className="column">
+              <div className="column2">
                 <div className="videosGrid">
                   <div className="video">{videos2}</div>
                 </div>
