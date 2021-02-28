@@ -80,8 +80,6 @@ i {
 
 .mainBody {
   height: calc(100vh - 70px);
-  display: flex;
-  overflow: hidden;
 }
 
 .videos {
@@ -91,15 +89,27 @@ i {
   padding: 15px 25px;
   overflow-y: scroll;
   .videosGrid {
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     .video {
-      width: calc(100% - 10px);
-      margin-bottom: 20px;
+      width: calc(25% - 10px);
+      margin-bottom: 40px;
       .thumbnail {
         width: 100%;
         height: 170px;
-        padding-top: 10px;
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .author {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
         img {
           object-fit: cover;
           height: 100%;
@@ -107,8 +117,11 @@ i {
         }
       }
       .details {
+        display: flex;
         padding-top: 10px;
         .text {
+          display: flex;
+          flex-direction: column;
           h3 {
             margin: 0;
             font-weight: 500;
@@ -126,23 +139,6 @@ i {
         }
       }
     }
-  }
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 155px;
-  }
-
-  .column1 {
-    flex: 25%;
-    max-width: 100%;
-    padding: 0 4px;
-  }
-  .column2 {
-    flex: 75%;
-    max-width: 100%;
-    padding: 0 4px;
   }
 }
 
